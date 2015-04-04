@@ -1,0 +1,45 @@
+// This is certainly overkill for a single widget, but I want
+// to show how I like organize styles when using a preprocessor.
+// Normally I would use this file just for layout and move other styles
+// seen here to "base/typography", "base/colors", "base/utility", etc.
+
+@import "../styles/lib/meyer-reset.css";
+@import "modules/form";
+
+.centered { margin: 0 auto; }
+
+a {
+	color: #69c;
+	text-decoration: none;
+	&:hover { border-bottom: 2px solid #ace; }
+}
+
+body {
+	background: #333;
+	font: 14px Helvetica, sans;
+	margin: 30px;
+}
+
+em { font-style: italic; }
+
+header {
+	font-size: 22px;
+	margin: 15px auto;
+}
+
+main {
+	background: #fff;
+	.border-radius(3px);
+	.centered;
+	padding: 20px;
+	text-align: center;
+	width: 400px;
+}
+
+.registration {
+	.form;
+}
+
+.step-order {
+	font-size: 14px;
+}
