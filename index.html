@@ -15,7 +15,7 @@
 				<h1>Tell Us More About You</h1>
 				<p class="step-order">(Step 1 of 4)</p>
 			</header>
-			<aside>Disclaimer: We never sell your information to spammers or other bad guys. <a href="#" title="Learn how we use this information.">Learn More.</a></aside>
+			<aside class="disclaimer">Disclaimer: We never sell your information to spammers or other bad guys. <a href="#" title="Learn how we use this information.">Learn More.</a></aside>
 
 			<form class="registration js-contain-inputs js-validate js-persist-placeholder">
 				<fieldset class="name">
@@ -49,6 +49,7 @@ TODO:
 	* create mixins (or polyfills) to implement unsupported CSS3
 	* less @import's are relative (should be rooted to somewhere useful)
 	* Move script/styles dependency pairs into their own directories?
+	* Handle Middle initial and suffix validations in JS (since HTML pattern/required attributes won't allow for an optionally blank input
 
 IF TIME TODO:
 	* Use browser geolocation API to auto-detect city/state/zip code (and apply style showing these were auto-populated and should be reviewed by the user) https://developers.google.com/maps/documentation/geocoding/

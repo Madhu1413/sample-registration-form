@@ -3,24 +3,31 @@
 // Normally I would use this file just for layout and move other styles
 // seen here to "base/typography", "base/colors", "base/utility", etc.
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+@import "../styles/base/colors";
 @import "../styles/lib/meyer-reset.css";
 @import "modules/form";
+
+@green: #2fc877;
 
 .centered { margin: 0 auto; }
 
 a {
-	color: #69c;
+	color: @blue_link;
 	text-decoration: none;
-	&:hover { border-bottom: 2px solid #ace; }
+	&:hover {
+		border-bottom: 2px solid @blue_link;
+		color: darken(@blue_link, 10%);
+	}
 }
 
 body {
 	background: #333;
-	font: 14px Helvetica, sans;
 	margin: 30px;
 }
 
-em { font-style: italic; }
+.disclaimer { margin: auto 30px; }
 
 header {
 	font-size: 22px;
@@ -40,6 +47,10 @@ main {
 	.form;
 }
 
-.step-order {
-	font-size: 14px;
-}
+// Typography
+
+body, input { font: 16px 'Open Sans', Helvetica, sans-serif; }
+
+.disclaimer { font-weight: 600; }
+
+.step-order { font-size: 12pt; }
