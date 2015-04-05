@@ -12,6 +12,8 @@ Code sample utilizing jQuery, RequireJS, and LessJS. Uses copious amounts of HTM
   * Regular expressions used in patterns probably don't work with certain edge cases.
 
 ## TODO/Feature Enhancements:
+  * Validation breaks with Mac/Chrome autofill
+  * Progress bar animation doesn't work in Mac/Chrome
   * Unit testing for JS modules. Should have done TDD, really.
   * Create mixins (or polyfills) to implement unsupported HTML5/CSS3
   * Move script/styles dependency pairs into their own directories? Does RequireJS make this easy/doable?
