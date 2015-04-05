@@ -1,11 +1,23 @@
-define(['jquery', 'contain-inputs'],function ($) {    
-	$(function() {
-		$('.js-validate input[required]:not(:submit)').parent('.input-container').append('<span class="check-mark">&nbsp;&#10003;&nbsp;</span>');
+define(['jquery', 'contain'],function ($, contain) {    
+	return {
+		init: function(opts) {
+			var containerClass = contain.init({selector: '.registration input:not(:submit)'});
 
-		// Initialize validatable inputs with .validate class after user starts using form
-		// Necessary in order to not cause :validate and :invalidate styles to trigger before user has had a chance to type in any inputs
-		$('.js-validate input[required]').blur(function(event) {
-			$(event.target).addClass('validate');
-		});
-	});
+			var form = opts.form;
+			var inputs = form.find('input:not(:submit)');
+			$(function() {
+				inputs.parent('.' + containerClass).append('<span class="check-mark">&nbsp;&#10003;&nbsp;</span>');
+
+				// Initialize validatable inputs with .validate class after user starts using form
+				// Necessary in order to not cause :validate and :invalidate styles to trigger before user has had a chance to type in any inputs
+				inputs.blur(function(event) {
+					$(event.target).addClass('validate');
+				});
+
+				form.find(':submit').click(function() {
+					inputs.addClass('validate');
+				});
+			});
+		}
+	};
 });

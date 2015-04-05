@@ -5,6 +5,8 @@ require.config({
     }
 });
 
-require(['lib/less', 'contain-inputs', 'persist-placeholder', 'validate'], function() {
-	// intentionally left blank
+require(['jquery', 'lib/less', 'persist-placeholders', 'validate'], function($, less, persistPlaceholders, validate) {
+	// Initialize JS modules with appropriate selectors
+	persistPlaceholders.init({container: $('.registration')});
+	validate.init({form: $('.registration')});
 });
