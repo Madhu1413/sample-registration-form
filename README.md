@@ -2,9 +2,9 @@
 Code sample utilizing jQuery, RequireJS, and LessJS. Uses copious amounts of HTML5 and CSS3. 
 
 ## One-Liner Launch Party
-  * Mac: `git clone https://github.com/DavidRivers/sample-registration-form; "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --allow-file-access-from-files`
-  * Linux: `git clone https://github.com/DavidRivers/sample-registration-form; chromium -allow-file-access-from-files`
-  * Windows: `git clone https://github.com/DavidRivers/sample-registration-form; chromium -allow-file-access-from-files; start chrome "sample-registration-form"`
+  * Mac: `git clone https://github.com/DavidRivers/sample-registration-form; "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --allow-file-access-from-files sample-registration-form/index.html`
+  * Linux: `git clone https://github.com/DavidRivers/sample-registration-form; chromium -allow-file-access-from-files sample-registration-form/index.html`
+  * Windows: `git clone https://github.com/DavidRivers/sample-registration-form; chromium -allow-file-access-from-files; start chrome "sample-registration-form/index.html"`
 
 ## Notes
   * CORS issues (caused by local less and RequireJS assets) requires Chrome/Chromium to be launched as: chromium -allow-file-access-from-files.

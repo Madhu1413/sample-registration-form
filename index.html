@@ -31,30 +31,3 @@
 
 	</body>
 </html>
-
-<!--
-	* CORS issue requires Chromium to be launched as: chromium -allow-file-access-from-files in order for dependencies to correctly load.
-	I have somewhat overengineered this, but I did this in order to exhibit organization...
-
-NOTES:
-	* I have assumed that all of the fields (except for "Middle Initial" and "Suffix") are required fields.
-	* "First Name"/"Last Name" may not be sensible for names that come from certain cultures
-	* Regular expressions used in patterns probably don't work with certain edge cases.
-	* Sorry it took so long; had to acquire Photoshop to get hex color codes and exact fonts
-	* Can I use this as code samples for other employers?
-
-TODO:
-	* Initialize JS modules by passing in the selectors to use
-	* Unit testing for JS modules. Should have done TDD, really.
-	* Create mixins (or polyfills) to implement unsupported CSS3
-
-	* Move script/styles dependency pairs into their own directories? Does RequireJS make this easy/doable?
-	* Use browser geolocation API to auto-detect city/state/zip code (and apply style showing these were auto-populated and should be reviewed by the user) https://developers.google.com/maps/documentation/geocoding/
-	* Coerce state input into upper-case
-	* Autocomplete the "State" input
-	* Autocomplete the "Suffix" field with a list of common suffixes
-	* Autofill City/State/Zip code fields as soon as possible (by hitting some kind of address verification service)
-	* Make diagonal stripes pattern purely CSS: https://css-tricks.com/stripes-css/
-	* Show progress within step (increment progress bar for each field inputted)
-
--->
