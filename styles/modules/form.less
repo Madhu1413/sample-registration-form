@@ -2,6 +2,7 @@
 
 @import "../base/colors";
 @import "../css3/border-radius";
+@import "../css3/box-shadow";
 @import "../css3/placeholder";
 
 @border-color: #bbb;
@@ -45,6 +46,7 @@
 		&.validate {
 			&:invalid {
 				background: mix(@gray_form, red, 75%);
+				.box-shadow(none);
 				&+.check-mark {
 					opacity: 0;
 					right: -20px;
