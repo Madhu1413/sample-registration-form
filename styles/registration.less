@@ -8,6 +8,7 @@
 @import "css3/animation";
 @import "css3/horizontal-gradient";
 @import "css3/border-radius";
+@import "pseudo/progress-bar";
 @import "modules/form";
 
 a {
@@ -43,27 +44,20 @@ main {
 	100% { left: 0; opacity: 1; }
 });
 
-
-progress[value="1"][max="4"] {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
+progress {
 	height: 10px;
 	overflow: hidden;
-	width: 400px;
-
-	&::-webkit-progress-bar {
-		background: #ddd;
+	.progress-bar({
+		background: @gray_progress;
 		background-size: 35px 10px, 100% 100%, 100% 100%;
 		.border-radius(3px);
-	}
-
-	&::-webkit-progress-value {
+	}, {
 		.animation(slide-in 5s linear 1);
 		.border-radius(3px);
 		.horizontal-gradient(@yellow, @green);
 		position: relative;
-	}
+	});
+	width: 400px;
 }
 
 .registration {
