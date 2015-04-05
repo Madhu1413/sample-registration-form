@@ -1,17 +1,10 @@
-// This is certainly overkill for a single widget, but I want
-// to show how I like organize styles when using a preprocessor.
-// Normally I would use this file just for layout and move other styles
-// seen here to "base/typography", "base/colors", "base/utility", etc.
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
-@import "../styles/base/colors";
-@import "../styles/lib/meyer-reset.css";
+@import "lib/meyer-reset.css";
+@import "base/colors";
+@import "base/typography";
+@import "utility/centered";
 @import "modules/form";
-
-@green: #2fc877;
-
-.centered { margin: auto; }
 
 a {
 	color: @blue_link;
@@ -29,10 +22,7 @@ body {
 
 .disclaimer { margin: auto 30px; }
 
-header {
-	font-size: 22px;
-	margin: 15px 30px;
-}
+header { margin: 15px 30px; }
 
 main {
 	background: #fff url(../img/footer-banner.png) no-repeat bottom center;
@@ -48,9 +38,3 @@ main {
 .registration {
 	.form;
 }
-
-// Typography
-
-body, input { font: 16px 'Open Sans', Helvetica, sans-serif; }
-
-.disclaimer { font-weight: 600; }

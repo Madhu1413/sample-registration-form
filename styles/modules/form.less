@@ -5,17 +5,11 @@
 @import "../css3/box-shadow";
 @import "../css3/placeholder";
 
-@border-color: #bbb;
-
 .form {
 	input {
-		.placeholder({
-			//color: @gray_placeholder; // not enough contrast
-			font-weight: bold;
-		});
 		background: @gray_form;
-		border: 1px solid @border-color;
-		color: darken(#9d9fa0, 20%);
+		border: 1px solid darken(@gray_form, 20%);
+		color: darken(@gray_placeholder, 20%);
 		height: 18px;
 		padding: 10px;
 		width: 302px;
@@ -31,7 +25,6 @@
 			background: @green;
 			border: 0;
 			color: #fff;
-			font-weight: 600;
 			height: inherit;
 			margin-bottom: 30px;
 			padding: 5px;
@@ -68,7 +61,7 @@
 	label { display: none; }
 
 	fieldset {
-		border: 2px solid darken(@border-color, 20%);
+		border: 2px solid darken(@gray_form, 20%);
 		.border-radius(3px);
 		margin: 25px auto;
 		width: 324px;
@@ -82,8 +75,6 @@
 			border: 3px solid @green;
 			.border-radius(20px);
 			color: @green;
-			font-size: 10pt;
-			font-weight: bold;
 			opacity: 0;
 			position: absolute;
 			right: -20px;
@@ -94,8 +85,6 @@
 	.persisted-placeholder {
 		color: #777;
 		display: none;
-		font-size: 11px;
-		font-weight: 600;
 		left: 11px;
 		position: absolute;
 		top: 2px;
