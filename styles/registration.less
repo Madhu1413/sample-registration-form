@@ -4,6 +4,10 @@
 @import "base/colors";
 @import "base/typography";
 @import "utility/centered";
+@import "utility/clearfix";
+@import "css3/animation";
+@import "css3/horizontal-gradient";
+@import "css3/border-radius";
 @import "modules/form";
 
 a {
@@ -22,19 +26,47 @@ body {
 
 .disclaimer { margin: auto 30px; }
 
-header { margin: 15px 30px; }
+legend { margin: 15px auto; }
 
 main {
 	background: #fff url(../img/footer-banner.png) no-repeat bottom center;
 	.border-radius(3px);
 	.centered;
-	//.clearfix; // not working. using overflow clearfix for now.
-	overflow: hidden;
+	.clearfix;
 	padding-top: 20px;
 	text-align: center;
 	width: 480px;
 }
 
+.keyframes(slide-in; {
+	0% { left: -100px; opacity: 0; }
+	100% { left: 0; opacity: 1; }
+});
+
+
+progress[value="1"][max="4"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	overflow: hidden;
+	width: 400px;
+
+	&::-webkit-progress-bar {
+		background: #ddd;
+		background-size: 35px 10px, 100% 100%, 100% 100%;
+		.border-radius(3px);
+	}
+
+	&::-webkit-progress-value {
+		.animation(slide-in 5s linear 1);
+		.border-radius(3px);
+		.horizontal-gradient(@yellow, @green);
+		position: relative;
+	}
+}
+
 .registration {
+	// How a module gets consumed
 	.form;
 }

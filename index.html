@@ -9,13 +9,11 @@
 	<body>
 
 		<main>
-			<img src="img/progress-bar-1-4.png" alt="Step 1 of 4" title="Step 1 of 4"/>
-			<header>
-				<h1>Tell Us More About You (Step 1/4)</h1>
-			</header>
-			<aside class="disclaimer">Disclaimer: We never sell your information to spammers or other bad guys. <a href="#" title="Learn how we use this information.">Learn More.</a></aside>
-
 			<form class="registration js-contain-inputs js-validate js-persist-placeholder">
+				<progress value="1" max="4"></progress>
+				<legend>Tell Us More About You (Step 1/4)</legend>
+				<aside class="disclaimer">Disclaimer: We never sell your information to spammers or other bad guys. <a href="#" title="Learn how we use this information.">Learn More.</a></aside>
+
 				<fieldset class="name">
 					<input class="first left-column" placeholder="First Name" required="required"/><input class="middle-initial right-column optional" placeholder="Middle Initial" pattern="(|[A-Za-z])"/>
 					<input class="last left-column" placeholder="Last Name" required="required"/><input class="suffix right-column optional" placeholder="Suffix"/>
@@ -38,21 +36,23 @@
 	* CORS issue requires Chromium to be launched as: chromium -allow-file-access-from-files in order for dependencies to correctly load.
 	I have somewhat overengineered this, but I did this in order to exhibit organization...
 
-TODO:
-	* Unit testing for JS modules. Should have done TDD, really.
-	* Create mixins (or polyfills) to implement unsupported CSS3
-	* Move script/styles dependency pairs into their own directories?
-	* Use browser geolocation API to auto-detect city/state/zip code (and apply style showing these were auto-populated and should be reviewed by the user) https://developers.google.com/maps/documentation/geocoding/
-	* Coerce state input into upper-case
-
 NOTES:
 	* I have assumed that all of the fields (except for "Middle Initial" and "Suffix") are required fields.
 	* "First Name"/"Last Name" may not be sensible for names that come from certain cultures
 	* Regular expressions used in patterns probably don't work with certain edge cases.
+	* Sorry it took so long; had to acquire Photoshop to get hex color codes and exact fonts
 	* Can I use this as code samples for other employers?
 
-Future design enhancements (given more time):
+TODO:
+	* Initialize JS modules by passing in the selectors to use
+	* Unit testing for JS modules. Should have done TDD, really.
+	* Create mixins (or polyfills) to implement unsupported CSS3
+
+	* Move script/styles dependency pairs into their own directories? Does RequireJS make this easy/doable?
+	* Use browser geolocation API to auto-detect city/state/zip code (and apply style showing these were auto-populated and should be reviewed by the user) https://developers.google.com/maps/documentation/geocoding/
+	* Coerce state input into upper-case
 	* Autocomplete the "State" input
 	* Autocomplete the "Suffix" field with a list of common suffixes
 	* Autofill City/State/Zip code fields as soon as possible (by hitting some kind of address verification service)
+
 -->
