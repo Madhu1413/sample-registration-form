@@ -1,3 +1,5 @@
+// Main stylesheet for a page should mainly define layout and glue module hooks to selectors on the page
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 @import "lib/meyer-reset.css";
@@ -5,11 +7,9 @@
 @import "base/typography";
 @import "utility/centered";
 @import "utility/clearfix";
-@import "css3/animation";
-@import "css3/horizontal-gradient";
 @import "css3/border-radius";
-@import "pseudo/progress-bar";
 @import "modules/form";
+@import "modules/progress";
 
 a {
 	color: @blue_link;
@@ -25,7 +25,7 @@ body {
 	margin: 30px;
 }
 
-.disclaimer { margin: auto 30px; }
+.disclaimer { margin: auto 45px; }
 
 legend { margin: 20px auto 15px; }
 
@@ -39,28 +39,9 @@ main {
 	width: 480px;
 }
 
-.keyframes(slide-in; {
-	0% { left: -100px; opacity: 0; }
-	100% { left: 0; opacity: 1; }
-});
-
-progress {
-	height: 10px;
-	overflow: hidden;
-	.progress-bar({
-		background: @gray_progress;
-		background-size: 35px 10px, 100% 100%, 100% 100%;
-		.border-radius(3px);
-	}, {
-		.animation(slide-in 5s linear 1);
-		.border-radius(3px);
-		.horizontal-gradient(@yellow, @green);
-		position: relative;
-	});
-	width: 400px;
-}
+progress { .progress; } // How a module gets consumed
 
 .registration {
-	.form; // How a module gets consumed
+	.form;
 	padding-bottom: 45px;
 }
