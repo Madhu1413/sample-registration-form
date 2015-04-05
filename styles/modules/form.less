@@ -46,7 +46,6 @@
 		&.validate {
 			&:invalid {
 				background: mix(@gray_form, red, 75%);
-				.box-shadow(none);
 				&+.check-mark {
 					opacity: 0;
 					right: -20px;
@@ -63,6 +62,8 @@
 		}
 		
 	}
+
+	:invalid { .box-shadow(none); }
 
 	label { display: none; }
 
