@@ -21,11 +21,14 @@
 
 		&.left-column { width: 165px; }
 
+		&.make-way { padding: 16px 10px 4px; }
+
 		&.right-column { width: 115px; }
 
 		&[type="submit"] {
 			.border-radius(15px);
 			background: @green;
+			border: 0;
 			color: #fff;
 			font-weight: 600;
 			height: inherit;
@@ -69,7 +72,8 @@
 	}
 
 	.input-container {
-		display: inline-block;
+		display: block;
+		float: left;
 		position: relative;
 		.check-mark {
 			border: 3px solid @green;
@@ -88,8 +92,9 @@
 		color: #777;
 		display: none;
 		font-size: 11px;
+		font-weight: 600;
 		left: 11px;
 		position: absolute;
-		top: 0;
+		top: 2px;
 	}
 }

@@ -38,6 +38,8 @@ main {
 	background: #fff url(../img/footer-banner.png) no-repeat bottom center;
 	.border-radius(3px);
 	.centered;
+	//.clearfix; // not working. using overflow clearfix for now.
+	overflow: hidden;
 	padding-top: 20px;
 	text-align: center;
 	width: 480px;
@@ -52,5 +54,3 @@ main {
 body, input { font: 16px 'Open Sans', Helvetica, sans-serif; }
 
 .disclaimer { font-weight: 600; }
-
-.step-order { font-size: 12pt; }

@@ -1,3 +1,3 @@
 $(function() {
-	$('.js-contain-inputs input').wrap('<span class="input-container">');
+	$('.js-contain-inputs input:not(:submit)').wrap('<span class="input-container">');
 });

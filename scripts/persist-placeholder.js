@@ -14,8 +14,10 @@ $(function() {
 		// Sure, I could use a ternary operator, but this seems more readable
 		if ($(event.target).val() === '') {
 			persistedPlaceholder.hide();
+			$(event.target).removeClass('make-way');
 		} else {
 			persistedPlaceholder.show();
+			$(event.target).addClass('make-way');
 		}
 	});
 });
