@@ -1,4 +1,5 @@
 define(['jquery'],function ($) {    
+	'use strict';
 	return {
 		init: function(opts) {
 			var containerClass = (typeof opts.containerClass === 'undefined') ? 'container' : opts.container;

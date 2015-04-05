@@ -1,4 +1,5 @@
 define(['jquery', 'contain'],function ($, contain) {    
+	'use strict';
 	return {
 		init: function(opts) {
 			var containerClass = contain.init({selector: '.registration input:not(:submit)'});
