@@ -1,4 +1,5 @@
 @import "../css3/animation";
+@import "../css3/border-radius";
 @import "../css3/horizontal-gradient";
 @import "../pseudo/progress-bar";
 
@@ -8,12 +9,12 @@
 });
 
 .progress {
+	.border-radius(5px);
 	height: 10px;
 	overflow: hidden;
 	.progress-bar({
 		background: @gray_progress;
 		background-size: 35px 10px, 100% 100%, 100% 100%;
-		.border-radius(3px);
 	}, {
 		.animation(slide-in 5s linear 1);
 		.border-radius(3px);
