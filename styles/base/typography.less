@@ -11,8 +11,13 @@ body, input { font: 95%/1.2 'Open Sans', Helvetica, sans-serif; }
 legend { font-size: 150%; }
 
 input {
-	.placeholder({ font-weight: bold; });
+	.placeholder({
+		font-weight: bold;
+		text-transform: none;
+	});
 	font-weight: 600;
+
+	&.middle-initial, &.state { text-transform: uppercase; }
 }
 
 .persisted-placeholder {
